@@ -1,0 +1,276 @@
+Bioinformatics Practicals – Viva Questions with Answers
+Below are the answers to all the important viva questions from Practical 1 to Practical 4. I've kept them simple, direct and easy to remember for your practical examination.
+Practical 1 – DNA Sequence Analysis
+Q1. What is DNA?
+DNA stands for Deoxyribonucleic Acid. It is the genetic material that carries hereditary information in living organisms.
+Q2. What are the four nitrogenous bases of DNA?
+The four nitrogenous bases are:
+- Adenine (A)
+- Thymine (T)
+- Guanine (G)
+- Cytosine (C)
+Q3. What is GC content?
+GC content is the percentage of Guanine (G) and Cytosine (C) bases present in a DNA sequence.
+Formula:
+\[
+GC\%=\frac{G+C}{Total\ Bases}\times100
+\]
+Q4. What is a DNA motif?
+A DNA motif is a short, specific nucleotide sequence that occurs within a larger DNA sequence and may have biological significance.
+Q5. What is a codon?
+A codon is a sequence of three nucleotides that specifies an amino acid or a stop signal during protein synthesis.
+Q6. What is a start codon?
+ATG is the standard start codon in DNA. It signals the beginning of protein translation.
+Q7. What are stop codons?
+The three stop codons in DNA are:
+- TAA
+- TAG
+- TGA
+They signal the termination of protein translation.
+Q8. What is a reverse complement?
+A reverse complement is a DNA sequence obtained by replacing each nucleotide with its complementary base and then reversing the resulting sequence.
+Example:
+Original:   ATGC
+Complement: TACG
+Reverse:    GCAT
+Q9. What is the difference between find() and count()?
+- find() returns the index of the first occurrence of a substring.
+- count() returns the number of occurrences of a substring.
+Q10. What is zero-based indexing?
+Zero-based indexing means that the first character or element has index 0 instead of 1.
+Example:
+DNA:   ATGC
+Index: 0123
+Practical 2 – Differential Gene Expression Analysis
+Q1. What is RNA-Seq?
+RNA-Seq stands for RNA Sequencing. It is a technique used to study gene expression by measuring RNA levels in a biological sample.
+Q2. What is gene expression?
+Gene expression is the process by which information stored in a gene is used to produce a functional product, such as RNA or protein.
+Q3. What is Fold Change?
+Fold Change measures the difference in gene expression between two conditions.
+Formula:
+\[
+FC=\frac{Treated}{Control}
+\]
+Q4. What is upregulation?
+Upregulation means an increase in gene expression compared to the control condition.
+In our practical:
+\[
+FC\geq2
+\]
+Q5. What is downregulation?
+Downregulation means a decrease in gene expression compared to the control condition.
+In our practical:
+\[
+FC\leq0.5
+\]
+Q6. What is No Significant Change?
+It means the fold change does not cross the thresholds defined in our practical.
+\[
+0.5<FC<2
+\]
+Q7. What is Pandas?
+Pandas is a Python library used for data manipulation, analysis and handling tabular datasets.
+Q8. What is a DataFrame?
+A DataFrame is a two-dimensional data structure in Pandas consisting of rows and columns.
+Q9. What is read_csv()?
+read_csv() is a Pandas function used to read data from a CSV file and store it in a DataFrame.
+Example:
+data = pd.read_csv("rna_seq.csv")
+Q10. What is the difference between a List and a DataFrame?
+- List: Stores multiple elements in a sequence.
+- DataFrame: Stores structured data in rows and columns.
+Q11. Why do we use append()?
+The append() method adds an element to the end of a list.
+Example:
+status.append("Upregulated")
+Q12. Is Fold Change alone enough to determine statistical significance?
+No. Fold Change measures the magnitude of expression change. Statistical significance requires additional statistical tests, such as p-value and adjusted p-value analysis.
+Practical 3 – Protein Sequence Analysis
+Q1. What is a protein?
+A protein is a biological macromolecule made up of chains of amino acids connected by peptide bonds.
+Q2. What are amino acids?
+Amino acids are organic molecules that act as the building blocks of proteins.
+Q3. How many standard amino acids are there?
+There are 20 standard amino acids used to build proteins.
+Q4. What is amino acid composition?
+Amino acid composition refers to the number and types of amino acids present in a protein sequence.
+Q5. What is molecular weight?
+Molecular weight is the total mass of a molecule, generally expressed in Daltons (Da) for proteins.
+Q6. What is Dalton?
+Dalton (Da) is a unit used to express atomic and molecular mass.
+Q7. What does count() do in Python?
+The count() function counts how many times a particular character or substring appears in a string.
+Example:
+seq = "AACCAG"
+print(seq.count("A"))
+Output:
+3
+Q8. Why do we use len()?
+The len() function returns the total number of characters in a string or elements in a collection.
+In our practical, it calculates the protein sequence length.
+Q9. Why do we multiply protein length by 110?
+We multiply by 110 because 110 Dalton is an approximate average molecular mass of an amino acid residue in a protein.
+Formula:
+\[
+Weight=Length\times110
+\]
+Q10. What is the difference between DNA and protein?
+DNA	Protein
+Made of nucleotides	Made of amino acids
+Contains A, T, G, C	Contains 20 standard amino acids
+Stores genetic information	Performs biological functions
+Contains genetic instructions	Is produced using genetic instructions
+Q11. What is a peptide bond?
+A peptide bond is a chemical bond that connects two amino acids in a protein.
+Practical 4 – Genomic Classification Using Random Forest
+Q1. What is Machine Learning?
+Machine Learning is a branch of Artificial Intelligence that enables computers to learn patterns from data and make predictions.
+Q2. What is supervised learning?
+Supervised learning is a type of Machine Learning in which a model is trained using labelled data.
+Q3. What is classification?
+Classification is a Machine Learning task in which data is assigned to predefined categories or classes.
+Q4. What is Random Forest?
+Random Forest is a supervised Machine Learning algorithm that combines multiple Decision Trees to make predictions using majority voting.
+
+Q5. What is a Decision Tree?
+
+A Decision Tree is a Machine Learning algorithm that makes decisions using a tree-like structure of conditions and branches.
+
+Q6. What are features?
+
+Features are the input variables used by a Machine Learning model to make predictions.
+
+In our practical:
+- GeneFeature1
+- GeneFeature2
+Q7. What is a target variable?
+
+A target variable is the output that the Machine Learning model is trained to predict.
+
+In our practical, the target is Class, which contains Healthy and Disease.
+
+Q8. What is train_test_split()?
+
+It is a Scikit-learn function used to divide a dataset into training and testing sets.
+
+Q9. What is test_size=0.3?
+
+It means 30% of the dataset is used for testing and the remaining 70% is used for training.
+
+Q10. What is random_state=1?
+
+It controls the randomness of the data splitting and model training so that results can be reproduced.
+
+Q11. What is stratify=y?
+
+It maintains the proportion of different classes in both training and testing datasets.
+
+Q12. What is fit()?
+
+The fit() function trains the Machine Learning model using the training data.
+
+Example:
+model.fit(X_train, y_train)
+
+
+
+Q13. What is predict()?
+
+The predict() function uses the trained model to predict the class of new or testing data.
+
+Example:
+prediction = model.predict(X_test)
+
+
+
+Q14. What is accuracy?
+
+Accuracy measures the percentage of correct predictions made by a model.
+
+Formula:
+\[
+Accuracy=\frac{Correct\ Predictions}{Total\ Predictions}\times100
+\]
+
+Q15. What is n_estimators=100?
+
+It specifies that the Random Forest model should contain 100 Decision Trees.
+
+Q16. What is Scikit-learn?
+
+Scikit-learn is a Python library used for Machine Learning tasks such as classification, regression, clustering and model evaluation.
+
+Q17. What is the difference between training data and testing data?
+- Training data is used to teach the model.
+- Testing data is used to evaluate the model's performance on unseen samples.
+Q18. Why do we use accuracy_score()?
+
+It calculates the accuracy of a classification model by comparing actual labels with predicted labels.
+
+Most Important Viva Questions – Quick Revision
+These are particularly important because they cover the central concepts of all four practicals.
+Question	Answer
+Full form of DNA	Deoxyribonucleic Acid
+Full form of RNA	Ribonucleic Acid
+Number of DNA bases	4
+GC content	Percentage of G and C bases
+Start codon	ATG
+Stop codons	TAA, TAG, TGA
+Number of standard amino acids	20
+Building blocks of proteins	Amino acids
+Protein mass unit	Dalton
+Average amino acid residue mass used	110 Da
+Python library for data analysis	Pandas
+Python library for Machine Learning	Scikit-learn
+Fold Change formula	Treated / Control
+FC for upregulation	≥ 2
+FC for downregulation	≤ 0.5
+Type of learning in Practical 4	Supervised Learning
+Algorithm used	Random Forest
+Number of trees	100
+Function to train model	fit()
+Function to predict	predict()
+Function to calculate accuracy	accuracy_score()
+
+
+5 questions your examiner may ask beyond the code
+These test whether you understand the actual bioinformatics concepts.
+
+1. What is Bioinformatics?
+
+Bioinformatics is the application of computer science, mathematics and statistics to analyze biological data such as DNA, RNA and protein sequences.
+
+2. What is Genomics?
+
+Genomics is the study of the complete genetic material (genome) of an organism.
+
+3. What is Proteomics?
+
+Proteomics is the large-scale study of proteins, including their structure, function and interactions.
+
+4. What is the Central Dogma of Molecular Biology?
+
+It describes the flow of genetic information:
+DNA
+
+Replication
+
+RNA
+
+Transcription
+
+Protein
+
+Translation
+
+
+5. Why is Python used in Bioinformatics?
+
+Python is used because it provides powerful libraries and tools for DNA sequence analysis, protein analysis, gene expression analysis, data visualization and Machine Learning.
+
+My advice for your viva: Prioritize these three things:
+1. Practical 1 and 3: Understand biological terminology.
+2. Practical 2: Understand Fold Change and its classification.
+3. Practical 4: Understand Machine Learning terminology, especially X, y, fit(), predict() and Random Forest.
+If you can explain these concepts in your own words, you'll be well prepared for most questions related to these four practicals.
