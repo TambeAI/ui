@@ -1,0 +1,39 @@
+
+import pandas as pd
+
+# Create RNA-Seq Dataset
+data = pd.DataFrame({
+    "Gene": ["Gene1", "Gene2", "Gene3", "Gene4", "Gene5", "Gene6"],
+
+    "Control": [50, 80, 100, 150, 60, 200],
+
+    "Treated": [120, 60, 250, 140, 180, 100]
+})
+
+# Save Dataset as CSV
+data.to_csv("rna_seq.csv", index=False)
+
+# Read Dataset
+data = pd.read_csv("rna_seq.csv")
+
+print("RNA-Seq Dataset\n")
+print(data)
+
+# Calculate Fold Change
+data["Fold Change"] = data["Treated"] / data["Control"]
+
+status = []
+
+for fc in data["Fold Change"]:
+    if fc >= 2:
+        status.append("Upregulated")
+    elif fc <= 0.5:
+        status.append("Downregulated")
+    else:
+        status.append("No Significant Change")
+
+# Add Status Column
+data["Status"] = status
+
+print("\nDifferential Gene Expression\n")
+print(data)
