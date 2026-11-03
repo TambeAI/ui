@@ -1,0 +1,33 @@
+seq = input("Enter the Protein Sequence: ").upper()
+
+print("\nProtein Sequence:", seq)
+
+# Amino Acid Count
+amino = "ACDEFGHIKLMNPQRSTVWY"
+
+for aa in amino:
+    count = seq.count(aa)
+
+    if count > 0:
+        print(aa, ":", count)
+
+# Approximate Molecular Weight
+wt = len(seq) * 110
+
+print("Total Weight is:", wt, "Dalton")
+
+Enter the Protein Sequence:  tswvtsacdghpqscadscadghpqsacdtswvtsacdghpqscadscadghpqsacdtswvtsacdghpqscadscadghp  qsacd 
+
+Protein Sequence: TSWVTSACDGHPQSCADSCADGHPQSACDTSWVTSACDGHPQSCADSCADGHPQSACDTSWVTSACDGHPQSCADSCADGHP  QSACD 
+A : 12
+C : 12
+D : 12
+G : 6
+H : 6
+P : 6
+Q : 6
+S : 15
+T : 6
+V : 3
+W : 3
+Total Weight is: 9900 Dalton
